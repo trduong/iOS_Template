@@ -87,6 +87,96 @@
 			<key>Path</key>
 			<string>models/User.m</string>
 		</dict>
+		<key>views/login/LoginViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>views</string>
+				<string>login</string>
+			</array>			
+			<key>Path</key>
+			<string>views/login/LoginViewController.h</string>
+		</dict>
+		<key>views/login/LoginViewController.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>views</string>
+				<string>login</string>
+			</array>			
+			<key>Path</key>
+			<string>views/login/LoginViewController.m</string>
+		</dict>
+		<key>views/login/LoginViewController.xib</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>views</string>
+				<string>login</string>
+			</array>			
+			<key>Path</key>
+			<string>views/login/LoginViewController.xib</string>
+		</dict>
+		<key>views/profile/ProfileViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>views</string>
+				<string>profile</string>
+			</array>			
+			<key>Path</key>
+			<string>views/profile/ProfileViewController.h</string>
+		</dict>
+		<key>views/profile/ProfileViewController.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>views</string>
+				<string>profile</string>
+			</array>			
+			<key>Path</key>
+			<string>views/profile/ProfileViewController.m</string>
+		</dict>
+		<key>views/profile/ProfileViewController.xib</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>views</string>
+				<string>profile</string>
+			</array>			
+			<key>Path</key>
+			<string>views/profile/ProfileViewController.xib</string>
+		</dict>
+		<key>views/profile/ProfileCell.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>views</string>
+				<string>profile</string>
+			</array>			
+			<key>Path</key>
+			<string>views/profile/ProfileCell.h</string>
+		</dict>
+		<key>views/profile/ProfileCell.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>views</string>
+				<string>profile</string>
+			</array>			
+			<key>Path</key>
+			<string>views/profile/ProfileCell.m</string>
+		</dict>
+		<key>views/profile/ProfileCell.xib</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>views</string>
+				<string>profile</string>
+			</array>			
+			<key>Path</key>
+			<string>views/profile/ProfileCell.xib</string>
+		</dict>
 		<key>images/Default.png</key>
 		<dict>
 			<key>Group</key>
@@ -107,6 +197,20 @@
 			<string>images</string>
 			<key>Path</key>
 			<string>images/Default-568h@2x.png</string>
+		</dict>
+		<key>images/Profile@2x.png</key>
+		<dict>
+			<key>Group</key>
+			<string>images</string>
+			<key>Path</key>
+			<string>images/Profile@2x.png</string>
+		</dict>
+		<key>images/Profile.png</key>
+		<dict>
+			<key>Group</key>
+			<string>images</string>
+			<key>Path</key>
+			<string>images/Profile.png</string>
 		</dict>
 	</dict>
 	<key>Description</key>
