@@ -232,9 +232,20 @@
 		<string>api/APIClient.m</string>
 		<string>models/User.h</string>
 		<string>models/User.m</string>
+		<string>views/login/LoginViewController.h</string>
+		<string>views/login/LoginViewController.m</string>
+		<string>views/login/LoginViewController.xib</string>
+		<string>views/profile/ProfileCell.h</string>
+		<string>views/profile/ProfileCell.m</string>
+		<string>views/profile/ProfileCell.xib</string>
+		<string>views/profile/ProfileViewController.h</string>
+		<string>views/profile/ProfileViewController.m</string>
+		<string>views/profile/ProfileViewController.xib</string>
 		<string>images/Default.png</string>
 		<string>images/Default@2x.png</string>
 		<string>images/Default-568h@2x.png</string>
+		<string>images/Profile.png</string>
+		<string>images/Profile@2x.png</string>
 	</array>
 	<key>Targets</key>
 	<array>
