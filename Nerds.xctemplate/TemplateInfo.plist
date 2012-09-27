@@ -253,7 +253,7 @@
 			<key>SharedSettings</key>
 			<dict>
 				<key>OTHER_LDFLAGS</key>
-				<string>-ObjC -all_load</string>
+				<string>-ObjC -all_load -lsqlite3.0</string>
 				<key>USER_HEADER_SEARCH_PATHS</key>
 				<string>$(BUILT_PRODUCTS_DIR)/usr/local/include</string>
 			</dict>

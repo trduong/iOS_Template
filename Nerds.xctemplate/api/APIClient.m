@@ -88,10 +88,10 @@
 
 -(void)saveUserToServer
 {
-    // create the dictionary to house the contents of this list
+    // create the dictionary to house the contents of this user
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
-    // set the objects based on the list contents
+    // set the dictionary object based on the user contents
     [dict setObject:[NSNumber numberWithInt:[User currentUser].userID] forKey:@"id"];
     [dict setObject:[User currentUser].facebookID forKey:@"facebook_id"];
     if([User currentUser].deviceToken != nil) {
@@ -100,10 +100,10 @@
     [User currentUser].notifyByEmail ? [dict setObject:@"true" forKey:@"notify_email"] : [dict setObject:@"false" forKey:@"notify_email"];
     [User currentUser].notifyByText ? [dict setObject:@"true" forKey:@"notify_text"] : [dict setObject:@"false" forKey:@"notify_text"];
     
-    // create the URL path
+    // create the URL path to PUT to the server
     NSString *urlString = [NSString stringWithFormat:@"%@/users/%d/settings", kBaseURLString, [User currentUser].userID];
     
-    // PUT (update) the list on the server
+    // PUT (update) the user on the server
     [[APIClient shared] putPath:urlString parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"Save User to Server Succeeded");
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
