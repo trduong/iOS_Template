@@ -1,9 +1,9 @@
 //
 //  LoginViewController.h
-//  CoolspotApp
+//  ___PROJECTNAME___
 //
-//  Created by Prashant Sridharan on 9/26/12.
-//  Copyright (c) 2012 Prashant Sridharan. All rights reserved.
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

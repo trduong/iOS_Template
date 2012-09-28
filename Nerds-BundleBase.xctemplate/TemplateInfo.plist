@@ -14,6 +14,22 @@
 	<array>
 		<dict>
 			<key>Description</key>
+			<string>Your new product&apos;s name.</string>
+			<key>EmptyReplacement</key>
+			<string>ProductName</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Name</key>
+			<string>Product Name</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
 			<string>Your company&apos;s bundle identifier prefix.</string>
 			<key>EmptyReplacement</key>
 			<string>com.yourcompany</string>
@@ -37,6 +53,20 @@
 			<string>Bundle Identifier</string>
 			<key>Type</key>
 			<string>static</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Your app&apos;s Facebook ID. Go to developers.facebook.com to create and set it.</string>
+			<key>EmptyReplacement</key>
+			<string>12345678901234567890</string>
+			<key>Identifier</key>
+			<string>appFacebookID</string>
+			<key>Name</key>
+			<string>Facebook ID (Opt)</string>
+			<key>Required</key>
+			<false/>
+			<key>Type</key>
+			<string>text</string>
 		</dict>
 	</array>
 	<key>Targets</key>
