@@ -11,8 +11,7 @@
 #import "CSJSONRequestOperation.h"
 #import "User.h"
 
-//#define kBaseURLString @"http://localhost:3000"
-#define kBaseURLString @"http://www.listemon.com"
+#define kBaseURLString @"http://localhost:3000"
 
 @implementation APIClient
 
