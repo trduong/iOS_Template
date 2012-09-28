@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.strategicnerds.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>___VARIABLE_bundleIdentifier:identifier___</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -35,13 +35,13 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>FacebookAppID</key>
-	<string>248060748648208</string>
+	<string>___VARIABLE_FacebookAppID:identifier___</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb248060748648208</string>
+				<string>fb___VARIABLE_FacebookAppID:identifier___</string>
 			</array>
 		</dict>
 	</array>

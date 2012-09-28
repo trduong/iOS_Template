@@ -60,7 +60,7 @@
 			<key>EmptyReplacement</key>
 			<string>12345678901234567890</string>
 			<key>Identifier</key>
-			<string>appFacebookID</string>
+			<string>FacebookAppID</string>
 			<key>Name</key>
 			<string>Facebook ID (Opt)</string>
 			<key>Required</key>
