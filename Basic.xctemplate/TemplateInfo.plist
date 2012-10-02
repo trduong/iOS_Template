@@ -45,48 +45,6 @@
 			<key>Path</key>
 			<string>AppDelegate.m</string>
 		</dict>
-		<key>api/CSJSONRequestOperation.h</key>
-		<dict>
-			<key>Group</key>
-			<string>api</string>
-			<key>Path</key>
-			<string>api/CSJSONRequestOperation.h</string>
-		</dict>
-		<key>api/CSJSONRequestOperation.m</key>
-		<dict>
-			<key>Group</key>
-			<string>api</string>
-			<key>Path</key>
-			<string>api/CSJSONRequestOperation.m</string>
-		</dict>
-		<key>api/APIClient.h</key>
-		<dict>
-			<key>Group</key>
-			<string>api</string>
-			<key>Path</key>
-			<string>api/APIClient.h</string>
-		</dict>
-		<key>api/APIClient.m</key>
-		<dict>
-			<key>Group</key>
-			<string>api</string>
-			<key>Path</key>
-			<string>api/APIClient.m</string>
-		</dict>
-		<key>models/User.h</key>
-		<dict>
-			<key>Group</key>
-			<string>models</string>
-			<key>Path</key>
-			<string>models/User.h</string>
-		</dict>
-		<key>models/User.m</key>
-		<dict>
-			<key>Group</key>
-			<string>models</string>
-			<key>Path</key>
-			<string>models/User.m</string>
-		</dict>
 		<key>views/login/LoginViewController.h</key>
 		<dict>
 			<key>Group</key>
@@ -214,9 +172,9 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>This template is provided by Strategic Nerds as a starting point for an iOS application that uses Facebook login and connects to the Strategic Nerds Rails Application Template.</string>
+	<string>This template is provided by Facebook as a starting point for an iOS application. It uses Facebook login, sets up a simple tab view controller, and adds all of the necessary configuration files.</string>
 	<key>Identifier</key>
-	<string>com.strategicnerds.BasicWithServerTemplate-iOS6</string>
+	<string>com.strategicnerds.BasicTemplate-iOS6</string>
 	<key>Kind</key>
 	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
 	<key>Nodes</key>
@@ -226,12 +184,6 @@
 		<string>Info.plist</string>
 		<string>AppDelegate.h</string>
 		<string>AppDelegate.m</string>
-		<string>api/CSJSONRequestOperation.h</string>
-		<string>api/CSJSONRequestOperation.m</string>
-		<string>api/APIClient.h</string>
-		<string>api/APIClient.m</string>
-		<string>models/User.h</string>
-		<string>models/User.m</string>
 		<string>views/login/LoginViewController.h</string>
 		<string>views/login/LoginViewController.m</string>
 		<string>views/login/LoginViewController.xib</string>

@@ -5,7 +5,7 @@ An awesome modern mobile application has three core components:
 3. Platform independence to support the widest possible range of users. In the US and other western countries, we often think of this as support for both iOS and Android. But consider mobile experiences that reach far more users, such as responsive web design. To execute on platform independence requires that you intelligently split the core logic of your application from the myriad user experiences, often implementing the former on a hosted server and delivering tailored implementations of the latter for various platforms of importance to your target market.
 
 # About This Template #
-This iOS template is designed to work in concert with a [Rails-based server](http://github.com/CoolAssPuppy/Rails_template) template. Together, the templates will save you 1-3 days of setup grunt work and include:
+This project contains two iOS templates. "Basic" is designed to work standalone as a starting point for iOS applications with Facebook connectivity built-in. "Basic With Server" is designed to work in concert with a [Rails-based server](http://github.com/CoolAssPuppy/Rails_template) template. Together, the templates will save you 1-3 days of setup grunt work and include:
 
 1. An Xcode template that, with one double-click, will generate a working iOS application with Facebook integration via the [Facebook iOS SDK](http://developers.facebook.com).
 2. A Rails Application Template that, with one command line instruction, will generate a complete Rails server to manage the User model and house any other business logic you'd like to create for your application.
@@ -17,7 +17,7 @@ Installing and using the template is pretty easy.
 ### Initial Installation ###
 You'll only have to do this once.
 
-1. Follow the instructions for downloading and setting up your Rails server using the accompanying [Rails Application Template](http://github.com/CoolAssPuppy/Rails_template).
+1. If you plan on using the "Basic With Server" template, follow the instructions for downloading and setting up your Rails server using the accompanying [Rails Application Template](http://github.com/CoolAssPuppy/Rails_template).
 2. Download the ZIP file containing all of the contents of this template.
 3. Name the unzipped folder something you'd like to see in Xcode and copy it to your ~/Library/Developer/Xcode/Templates folder.
 
@@ -52,7 +52,7 @@ Both of these libraries change frequently, so rather than bundling them in our t
 
 17. Download the latest [Facebook iOS SDK](http://developers.facebook.com/ios) and install it according to the instructions.
 18. Follow the [instructions](https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/3.1/) to add the Facebook SDK to your Project.
-19. Follow the [instructions](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking) to download and install the AFNetworking library.
+19. If you're planning on using the "Basic With Server" template, follow the [instructions](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking) to download and install the AFNetworking library.
 20. Compile and run your application in the iOS 6.0 Simulator.
 
 That's it!
