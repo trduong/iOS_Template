@@ -2,7 +2,7 @@ An awesome modern mobile application has three core components:
 
 1. An engaging user experience that not only dazzles and excites your customers, but also helps them get complex tasks done with a minimum of intervention. This template won't help you be a great designer, but it will help you get a lot of grunt work out of the way so that you can focus your time and talent on writing great apps, which will, among many things, get you a lot of practice building things for customers.
 2. [Social design](https://developers.facebook.com/socialdesign/) at the core of every element of the user experience. Sharing with friends, following other users, and liking items or otherwise expressing interest in components of your application all foster conversations between users and help you build intelligent interfaces that anticipate user desires.
-3. Platform independence to support the widest possible range of users. In the US and other western countries, we often think of this as support for both iOS and Android. But consider mobile experiences that reach far more users, such as responsive web design. To execute on platform independence requires that you intelligently split the core logic of your application from the myriad user experiences, often implementing the former on a hosted server and delivering tailored implementations of the latter for various platforms of importance to your target market.
+3. Platform independence to support the widest possible range of users. In the US and other western countries, we often think of this as support for both iOS and Android. But consider mobile experiences that reach far more users, such as responsive web design.
 
 # About This Template #
 This project contains two iOS templates. "Basic" is designed to work standalone as a starting point for iOS applications with Facebook connectivity built-in. "Basic With Server" is designed to work in concert with a [Rails-based server](http://github.com/CoolAssPuppy/Rails_template) template. Together, the templates will save you 1-3 days of setup grunt work and include:
@@ -19,7 +19,7 @@ You'll only have to do this once.
 
 1. If you plan on using the "Basic With Server" template, follow the instructions for downloading and setting up your Rails server using the accompanying [Rails Application Template](http://github.com/CoolAssPuppy/Rails_template).
 2. Download the ZIP file containing all of the contents of this template.
-3. Name the unzipped folder something you'd like to see in Xcode and copy it to your ~/Library/Developer/Xcode/Templates folder.
+3. Name the unzipped folder something you'd like to see in Xcode (e.g., "Facebook") and copy it to your ~/Library/Developer/Xcode/Templates folder.
 
 ### Create a Facebook App ###
 You'll follow the remainder of these instructions each time you want to use the template to create a new app.
