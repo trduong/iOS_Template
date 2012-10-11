@@ -26,9 +26,6 @@ extern NSString *const SessionStateChangedNotification;
 @property (strong, nonatomic) UITabBarController *tabBarController;
 @property (strong, nonatomic) ProfileViewController *profileViewController;
 
-// you'll put all your logic for skinning the app here
--(void)customizeiPhoneTheme;
-
 // the callback from the login view controller
 -(void)openSession;
 
