@@ -25,9 +25,9 @@
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self _customizeIPhoneTheme];
-    
+
     [self _constructBaseUI];
-    
+
     // we want to see if we have a valid Facebook authentication token for the current state
     if(FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
         // show the logged in view, this won't display any new UI
@@ -36,14 +36,14 @@
         // display the login page
         [self _constructLoggedOutUI];
     }
-  
+
   return YES;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
   // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-  
+
   // this means the user interrupted the Facebook login somehow (e.g., clicking on the Home button)
   if(FBSession.activeSession.state == FBSessionStateCreatedOpening) {
     // close the session and start over
@@ -57,7 +57,7 @@
 {
   switch (state) {
     case FBSessionStateOpen:
-      [self _loadCurrentUser:session.accessToken];
+      [self _loadCurrentUser:session.accessTokenData.accessToken];
       break;
     case FBSessionStateClosed:
     case FBSessionStateClosedLoginFailed:
@@ -84,7 +84,7 @@
   // setup permissions list first
   NSMutableArray *permissions = [[NSMutableArray alloc] init];
   [permissions addObject:@"email"];
-  
+
   // now open the session with the permissions list
   [FBSession openActiveSessionWithReadPermissions:permissions allowLoginUI:YES completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
     [self sessionStateChanged:session state:status error:error];
@@ -101,13 +101,13 @@
 -(void) _constructBaseUI
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
+
     // construct the tab bar
     self.tabBarController = [[UITabBarController alloc] init];
-    
+
     // place the tab bar controller in the window hierarchy
     [[self window] setRootViewController:self.tabBarController];
-    
+
     [self.window makeKeyAndVisible];
 }
 
@@ -119,15 +119,15 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error creating session with Facebook token: %@", error);
     }];
-    
+
     // load the current user
     [[APIClient shared] getMe:^(AFHTTPRequestOperation *operation, id responseObject) {
         [User setCurrentUser:responseObject];
         [[User currentUser] setFacebookToken:token];
-        
+
         // register for Push Notifications
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
-        
+
         [self _constructLoggedInUI];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Couldn't load the user.");
@@ -139,15 +139,15 @@
   // construct the profile view
   self.profileViewController = [[ProfileViewController alloc] init];
   UINavigationController *profileNavController = [[UINavigationController alloc] initWithRootViewController:self.profileViewController];
-  
+
   // add the tab view controllers to the tab bar controller, the last item should be nil
   NSArray* controllers = [NSArray arrayWithObjects:profileNavController, nil];
   self.tabBarController.viewControllers = controllers;
-  
+
   // display the tab bar
   self.tabBarController.tabBar.alpha = 0;
   self.tabBarController.tabBar.hidden = NO;
-  
+
   // do some fancy animation
   [UIView animateWithDuration:0.2 animations:^{
     self.tabBarController.tabBar.alpha = 1.f;
@@ -166,7 +166,7 @@
 
 -(void) _customizeIPhoneTheme
 {
-    
+
 }
 
 @end
