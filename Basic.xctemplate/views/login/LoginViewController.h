@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <FBLoginViewDelegate>
 
-- (void)loginFailed;
+@property (weak, nonatomic) IBOutlet FBLoginView *loginView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+
+-(void)loginFailed;
 
 @end

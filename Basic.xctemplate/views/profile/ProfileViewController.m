@@ -9,30 +9,31 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "ProfileViewController.h"
 #import "ProfileCell.h"
+#import "AppDelegate.h"
 
 @implementation ProfileViewController
 
 -(id)init
 {
-  // call the superclass's initializer
-  self = [super initWithStyle:UITableViewStyleGrouped];
-  
-  if(self) {
-    // set the title of the nav bar
-    UINavigationItem *navItem = [self navigationItem];
-    [navItem setTitle:@"Profile"];
-    
-    // now create a logout button for the left nav bar button area
-    [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logoutButtonWasPressed:)]];
-    
-    // set the tab bar title information
-    UITabBarItem* tbi = [self tabBarItem];
-    [tbi setTitle:@"Profile"];
-    UIImage* tb_image = [UIImage imageNamed:@"Profile.png"];
-    [tbi setImage:tb_image];
-  }
-  
-  return self;
+    // call the superclass's initializer
+    self = [super initWithStyle:UITableViewStyleGrouped];
+
+    if(self) {
+        // set the title of the nav bar
+        UINavigationItem *navItem = [self navigationItem];
+        [navItem setTitle:@"Profile"];
+
+        // now create a logout button for the left nav bar button area
+        [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logoutButtonWasPressed:)]];
+
+        // set the tab bar title information
+        UITabBarItem* tbi = [self tabBarItem];
+        [tbi setTitle:@"Profile"];
+        UIImage* tb_image = [UIImage imageNamed:@"Profile.png"];
+        [tbi setImage:tb_image];
+    }
+
+    return self;
 }
 
 -(void)viewDidLoad
@@ -41,86 +42,88 @@
 
 -(void)logoutButtonWasPressed:(id)sender
 {
-  [FBSession.activeSession closeAndClearTokenInformation];
+    //  [FBSession.activeSession closeAndClearTokenInformation];
+    // create the delegate and open the Facebook session
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate closeSession];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-  return [self init];
+    return [self init];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-  [super viewWillAppear:animated];
-  
-  // reload all the table data
-  [[self tableView] reloadData];
+    [super viewWillAppear:animated];
+
+    // reload all the table data
+    [[self tableView] reloadData];
 }
 
 #pragma mark - Table view data source
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  if(section == 0)
-    return 1;
-  else
-    return 1;
+    if(section == 0)
+        return 1;
+    else
+        return 1;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 2;
+    return 2;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-  if(section == 0)
-    return @"Posting to Facebook";
-  else if (section == 1)
-    return @"Let Us Know How We're Doing";
-  else
-    return @"Placeholder";
+    if(section == 0)
+        return @"Posting to Facebook";
+    else if (section == 1)
+        return @"Let Us Know How We're Doing";
+    else
+        return @"Placeholder";
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if(indexPath.section == 0)
-  {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell"];
-    UISwitch *switchView;
-    if(cell == nil) {
-      cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SwitchCell"];
-      cell.selectionStyle = UITableViewCellSelectionStyleNone;
-      switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
-      cell.accessoryView = switchView;
+    if(indexPath.section == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell"];
+        UISwitch *switchView;
+        if(cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SwitchCell"];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+            cell.accessoryView = switchView;
+        }
+
+        switch(indexPath.row)
+        {
+            // TODO: note, this is NOT wired up. It's just a placeholder.
+            case 0:
+                cell.textLabel.text = @"Post to Timeline";
+                [switchView setOn:TRUE];
+                break;
+        }
+
+        return cell;
+    } else {
+        UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
+        if(cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        }
+
+        cell.textLabel.text = @"Provide Feedback";
+
+        return cell;
     }
-    
-    switch(indexPath.row)
-    {
-	  // TODO: note, this is NOT wired up. It's just a placeholder.
-      case 0:
-        cell.textLabel.text = @"Post to Timeline";
-        [switchView setOn:TRUE];
-        break;
-    }
-    
-    return cell;
-  } else {
-    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if(cell == nil) {
-      cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
-    
-    cell.textLabel.text = @"Provide Feedback";
-    
-    return cell;
-  }
 }
 
 // wire up cell activity
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  NSLog(@"Selected: %d", indexPath.row);
+    NSLog(@"Selected: %d", indexPath.row);
 }
 
 @end
