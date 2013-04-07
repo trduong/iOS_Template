@@ -9,58 +9,58 @@
 #import "LoginViewController.h"
 #import "AppDelegate.h"
 
-@interface LoginViewController()
-
-- (IBAction)performLogin:(id)sender;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
-
-@end
-
 @implementation LoginViewController
 
 @synthesize spinner;
+@synthesize loginView = _loginView;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-  if (self) {
-    // Custom initialization
-  }
-  return self;
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
-  [super viewDidLoad];
-  // Do any additional setup after loading the view from its nib.
+    [super viewDidLoad];
+
+    // TODO: only ask for permissions you really need
+    // For more information about permissions: https://developers.facebook.com/docs/reference/login/#permissions
+    self.loginView.readPermissions = @[@"email", @"user_likes"];
+    self.loginView.delegate = self;
 }
 
-- (void)viewDidUnload
+-(void)viewDidUnload
 {
-  [self setSpinner:nil];
-  [super viewDidUnload];
-  // Release any retained subviews of the main view.
-  // e.g. self.myOutlet = nil;
+    [self setSpinner:nil];
+    [super viewDidUnload];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-  return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)loginFailed
+-(void)loginFailed
 {
-  // User switched back to the app without authorizing. Stay here, but stop the spinner.
-  [self.spinner stopAnimating];
+    // User switched back to the app without authorizing. Stay here, but stop the spinner.
+    [self.spinner stopAnimating];
 }
 
-- (IBAction)performLogin:(id)sender {
-  // start animating the spinner
-  [self.spinner startAnimating];
-  
-  // create the delegate and open the Facebook session
-  AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-  [appDelegate openSession];
+// FBLoginViewDelegate
+-(void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user
+{
+    NSLog(@"[FBLoginView:FBLoginViewDelegate:loginViewFetchedUserInfo] The user has logged in");
+
+    // start animating the spinner
+    [self.spinner startAnimating];
+
+    // create the delegate and open the Facebook session
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate openSession];
 }
 
 @end

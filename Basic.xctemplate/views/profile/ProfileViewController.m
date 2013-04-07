@@ -42,7 +42,6 @@
 
 -(void)logoutButtonWasPressed:(id)sender
 {
-    //  [FBSession.activeSession closeAndClearTokenInformation];
     // create the delegate and open the Facebook session
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     [appDelegate closeSession];

@@ -26,7 +26,8 @@ extern NSString *const SessionStateChangedNotification;
 @property (strong, nonatomic) UITabBarController *tabBarController;
 @property (strong, nonatomic) ProfileViewController *profileViewController;
 
-// the callback from the login view controller
+// public methods to open and close Facebook sessions
 -(void)openSession;
+-(void)closeSession;
 
 @end
