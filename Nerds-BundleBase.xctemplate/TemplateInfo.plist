@@ -62,7 +62,21 @@
 			<key>Identifier</key>
 			<string>FacebookAppID</string>
 			<key>Name</key>
-			<string>Facebook ID (Opt)</string>
+			<string>Facebook ID</string>
+			<key>Required</key>
+			<false/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Your app&apos;s Facebook Display Name. Go to developers.facebook.com to create and set it.</string>
+			<key>EmptyReplacement</key>
+			<string>12345678901234567890</string>
+			<key>Identifier</key>
+			<string>FacebookDisplayName</string>
+			<key>Name</key>
+			<string>Facebook Display Name</string>
 			<key>Required</key>
 			<false/>
 			<key>Type</key>

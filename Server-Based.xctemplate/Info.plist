@@ -36,6 +36,8 @@
 	</array>
 	<key>FacebookAppID</key>
 	<string>___VARIABLE_FacebookAppID:identifier___</string>
+	<key>FacebookDisplayName</key>
+	<string>___VARIABLE_FacebookDisplayName:identifier___</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
