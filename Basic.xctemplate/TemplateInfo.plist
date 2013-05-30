@@ -51,7 +51,7 @@
 			<array>
 				<string>views</string>
 				<string>login</string>
-			</array>			
+			</array>
 			<key>Path</key>
 			<string>views/login/LoginViewController.h</string>
 		</dict>
@@ -61,7 +61,7 @@
 			<array>
 				<string>views</string>
 				<string>login</string>
-			</array>			
+			</array>
 			<key>Path</key>
 			<string>views/login/LoginViewController.m</string>
 		</dict>
@@ -71,7 +71,7 @@
 			<array>
 				<string>views</string>
 				<string>login</string>
-			</array>			
+			</array>
 			<key>Path</key>
 			<string>views/login/LoginViewController.xib</string>
 		</dict>
@@ -81,7 +81,7 @@
 			<array>
 				<string>views</string>
 				<string>profile</string>
-			</array>			
+			</array>
 			<key>Path</key>
 			<string>views/profile/ProfileViewController.h</string>
 		</dict>
@@ -91,7 +91,7 @@
 			<array>
 				<string>views</string>
 				<string>profile</string>
-			</array>			
+			</array>
 			<key>Path</key>
 			<string>views/profile/ProfileViewController.m</string>
 		</dict>
@@ -101,7 +101,7 @@
 			<array>
 				<string>views</string>
 				<string>profile</string>
-			</array>			
+			</array>
 			<key>Path</key>
 			<string>views/profile/ProfileViewController.xib</string>
 		</dict>
@@ -111,7 +111,7 @@
 			<array>
 				<string>views</string>
 				<string>profile</string>
-			</array>			
+			</array>
 			<key>Path</key>
 			<string>views/profile/ProfileCell.h</string>
 		</dict>
@@ -121,7 +121,7 @@
 			<array>
 				<string>views</string>
 				<string>profile</string>
-			</array>			
+			</array>
 			<key>Path</key>
 			<string>views/profile/ProfileCell.m</string>
 		</dict>
@@ -131,7 +131,7 @@
 			<array>
 				<string>views</string>
 				<string>profile</string>
-			</array>			
+			</array>
 			<key>Path</key>
 			<string>views/profile/ProfileCell.xib</string>
 		</dict>
@@ -172,7 +172,7 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>This template is provided by Facebook as a starting point for an iOS application. It uses Facebook login, sets up a simple tab view controller, and adds all of the necessary configuration files.</string>
+	<string>This template is provided by Facebook as a starting point for an iOS application. It uses Facebook Login, sets up a simple tab view controller, and adds all of the necessary configuration files.</string>
 	<key>Identifier</key>
 	<string>com.strategicnerds.BasicTemplate-iOS6</string>
 	<key>Kind</key>
