@@ -46,6 +46,15 @@
 				<string>Social</string>
 				<string>Accounts</string>
 				<string>AdSupport</string>
+				<string>Security</string>
+				<string>AudioToolbox</string>
+				<string>CFNetwork</string>
+				<string>CoreGraphics</string>
+				<string>CoreLocation</string>
+				<string>MobileCoreServices</string>
+				<string>QuartzCore</string>
+				<string>StoreKit</string>
+				<string>SystemConfiguration</string>
 			</array>
 		</dict>
 	</array>
