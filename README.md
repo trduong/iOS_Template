@@ -1,5 +1,5 @@
 # About This Template #
-This project contains two iOS templates. "Basic" is designed to work standalone as a starting point for iOS applications with Facebook connectivity built-in. "Parse" is defiend to work with Parse as its back-end. "Server-Based" is designed to work in concert with a [Rails-based server](http://github.com/CoolAssPuppy/Rails_template) template. Together, the templates will save you 1-3 days of setup grunt work and include:
+This project contains several iOS templates. "Basic" is designed to work standalone as a starting point for iOS applications with Facebook connectivity built-in. "Parse" is designed to work with Parse as its back-end. "Server-Based" is designed to work in concert with a [Rails-based server](http://github.com/CoolAssPuppy/Rails_template) template. Together, the templates will save you 1-3 days of setup grunt work and include:
 
 1. An Xcode template that, with one double-click, will generate a working iOS application with Facebook integration via the [Facebook iOS SDK](http://developers.facebook.com).
 2. A Rails Application Template that, with one command line instruction, will generate a complete Rails server to manage the User model and house any other business logic you'd like to create for your application.
